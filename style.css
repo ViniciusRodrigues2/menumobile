@@ -10,8 +10,10 @@
 }
 body{
     width: 100%;
-    height: 100%;
-    background-color: #0f1011e2;
+    height: 100vh;
+    background-image: linear-gradient(to left,rgba(0, 0, 0, 0.501),rgba(0, 0, 0, 0.501)),url('lr0vf_first.jpg');
+    background-size: cover;
+    overflow-x: hidden;
 }
 .container{
     display: flex;
@@ -19,18 +21,28 @@ body{
     justify-content: space-between;
     background-color: rgb(111, 63, 147);
     height: 15vh;
+    overflow-y: hidden;
 }
 .container .logo{
+    display: flex;
     padding-left: 1.5em;
+    width: 130px;
+    padding-top: 15px;
+    align-items: center;
 }
-.container .logo a{
+.container .logo img{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container .logo span{
     font-size: 2em;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bolder;
-}
-.container .logo a>span{
-    color: rgb(10, 140, 205);
+    color: transparent;
+    font-weight: bold;
+    font-family: fantasy;
+    background-image: url('gif-bg.gif');
+    -webkit-background-clip: text;
 }
 .container .menu #menu-list{
     display: flex;
@@ -42,6 +54,20 @@ body{
     color: white;
     text-decoration: none;
     font-size: 1.3em;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+.center h1{
+    color: transparent;
+    font-size: 12em;
+    margin-top: 3em;
+    font-family: fantasy;
+    background-image: url('gif-bg.gif');
+    -webkit-background-clip: text;
 }
 @media (max-width:700px){
     .container .menu #menu-list{
@@ -56,6 +82,21 @@ body{
         transition: all .3s ease-in;
         visibility: hidden;
         overflow-y: hidden;
+    }
+
+    .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+    }
+    .center h1{
+        color: transparent;
+        font-size: 6em;
+        margin-top: 3em;
+        font-family: fantasy;
+        background-image: url('gif-bg.gif');
+        -webkit-background-clip: text;
     }
     ::-webkit-scrollbar-thumb{
         background-color: rgba(107, 1, 149, 0.82);
@@ -80,7 +121,7 @@ body{
         border-radius: 15px;
     }
     #btn-menu{
-        margin-right: 20px;
+        margin-right: 50px;
         background-color: transparent;
         padding: 5px 8px;
         border: none;
